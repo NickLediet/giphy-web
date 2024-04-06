@@ -4,7 +4,8 @@ type PreviewImageProps = {
     text: string
     imageUrl: string
     position: TextPosition,
-    altText: string
+    altText: string,
+    testid?: string
 }
 
 function ImageText(props: { text: string }) {
@@ -16,11 +17,11 @@ function ImageText(props: { text: string }) {
     )
 }
 
-export function PreviewImage({ text, imageUrl, position, altText }: PreviewImageProps) {
+export function PreviewImage({ text, imageUrl, position, altText, testid }: PreviewImageProps) {
     return (
         <div>
             <div className="image-container">
-                <img src={ imageUrl } alt={ altText } data-testid="image" />
+                <img src={ imageUrl } alt={ altText } data-testid={testid || 'image'} />
                 { position !== TextPosition.Below && <ImageText text={ text } data-testid={position} /> }
             </div>
             { position === TextPosition.Below && <ImageText text={ text } data-testid={position} /> }

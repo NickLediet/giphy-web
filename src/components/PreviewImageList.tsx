@@ -1,7 +1,6 @@
 import { Image, TextPosition } from '../lib'
 import { PreviewImage } from './PreviewImage'
 
-
 type PreviewImageProps = {
     images: Image[],
     text: string,
@@ -15,7 +14,7 @@ export function PreviewImageList(props: PreviewImageProps) {
             {images && images.map(image => (
                 <PreviewImage 
                     key={image.id} 
-                    data-testid={image.id}
+                    testid={image.id}
                     imageUrl={image.url} 
                     altText={image.altText} 
                     text={text} 

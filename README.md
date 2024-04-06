@@ -21,8 +21,7 @@
       - [ ] String text
       - [ ] Position:Enum position
       - [ ] String[] imageUrls
-  - [ ] PreviewImageList
-    - [ ] 
+  - [x] PreviewImageList
   - [x] PreviewImage
     - [x] props
       - [x] String text
