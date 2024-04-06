@@ -22,6 +22,7 @@ function App() {
           count is {count}
         </button>
         <p>
+          API KEY is {import.meta.env.GIPHY_API_KEY}
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
