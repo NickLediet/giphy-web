@@ -1,8 +1,20 @@
 import { QuerySection } from './components/QuerySection'
-import { Theme, Separator, Button } from '@radix-ui/themes'
+import { Theme, Separator, Button, Heading, Flex, Box } from '@radix-ui/themes'
 import { useEffect, useState } from 'react'
 import { TextPosition, useImageQuery } from './lib'
 import { PreviewImageList } from './components/PreviewImageList'
+
+function Divider () {
+  return (
+    <Separator 
+      decorative 
+      size={'3'} 
+      color='gray' 
+      orientation={'horizontal'} 
+      my="4"
+      style={{ width: '100%' }}/>
+  )
+}
 
 function App() {
   const { images, error, queryImages } = useImageQuery()
@@ -41,11 +53,15 @@ function App() {
   return (
     <Theme appearance='dark'>
       <main>
-        <QuerySection 
-          onQueryChange={onQueryChange}
-        />
+        <Heading as="h1" mb={'3'} align={'center'}>giphy-web</Heading>
+        <Divider />
+        <Flex align={'center'} justify={'center'}>
+          <Box maxWidth={'1000px'}>
+            <QuerySection onQueryChange={onQueryChange} />
+          </Box>
+        </Flex>
         { error && <div>{error}</div> }
-        <Separator decorative/>
+        <Divider />
         { (text && position) && <div className="results-section">
           <Button onClick={nextHandler}>Next</Button>
           <PreviewImageList images={images} text={text} position={position} />

@@ -45,5 +45,4 @@ describe('QuerySection', () => {
         expect(onQueryChange).toHaveBeenCalledWith(query, position, text)
         unmount()
     })
-
 })

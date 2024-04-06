@@ -5,7 +5,8 @@ const API_KEY = import.meta.env.VITE_GIPHY_API_KEY
 const REQUEST_LIMIT = 3
 const REQUEST_RATING = 'g'
 
-
+// Cache the results of the API call based on the query and page
+// NOTE: I assume there is a native way to do this react, but for now I will use lodash memoize
 const _queryImages = memoize(async (query: string, page: number) => {
     const offset = page * REQUEST_LIMIT
     return await fetch(`https://api.giphy.com/v1/stickers/search?q=${query}&limit=${REQUEST_LIMIT}&rating=${REQUEST_RATING}&api_key=${API_KEY}&offset=${offset}`)
@@ -33,7 +34,6 @@ export function useImageQuery() {
                 setError(e.message) // works, `e` narrowed to Error
             }
         }
-
     }
 
     return {
