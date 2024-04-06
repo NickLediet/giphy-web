@@ -1,0 +1,128 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`QuerySection > matches snapshot 1`] = `
+<div>
+  <div
+    class="radix-themes"
+    data-accent-color="indigo"
+    data-gray-color="slate"
+    data-has-background="true"
+    data-is-root-theme="true"
+    data-panel-background="translucent"
+    data-radius="medium"
+    data-scaling="100%"
+  >
+    <form>
+      <div
+        class="rt-TextFieldRoot rt-r-size-2 rt-variant-surface"
+        data-accent-color=""
+      >
+        <input
+          class="rt-reset rt-TextFieldInput"
+          data-testid="query"
+          placeholder="Search for images..."
+          spellcheck="false"
+          value=""
+        />
+        <div
+          class="rt-TextFieldSlot"
+        >
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 15 15"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <button
+        aria-autocomplete="none"
+        aria-controls="radix-:r0:"
+        aria-expanded="false"
+        class="rt-reset rt-SelectTrigger rt-r-size-2 rt-variant-surface"
+        data-accent-color=""
+        data-placeholder=""
+        data-state="closed"
+        dir="ltr"
+        role="combobox"
+        type="button"
+      >
+        <span
+          class="rt-SelectTriggerInner"
+        >
+          <span
+            style="pointer-events: none;"
+          >
+            Select text position
+          </span>
+        </span>
+        <svg
+          aria-hidden="true"
+          class="rt-SelectIcon"
+          fill="currentcolor"
+          height="9"
+          viewBox="0 0 9 9"
+          width="9"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.135232 3.15803C0.324102 2.95657 0.640521 2.94637 0.841971 3.13523L4.5 6.56464L8.158 3.13523C8.3595 2.94637 8.6759 2.95657 8.8648 3.15803C9.0536 3.35949 9.0434 3.67591 8.842 3.86477L4.84197 7.6148C4.64964 7.7951 4.35036 7.7951 4.15803 7.6148L0.158031 3.86477C-0.0434285 3.67591 -0.0536285 3.35949 0.135232 3.15803Z"
+          />
+        </svg>
+      </button>
+      <select
+        aria-hidden="true"
+        style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+        tabindex="-1"
+      >
+        <option
+          value=""
+        />
+        <option
+          value="center-top"
+        >
+          Center Top
+        </option>
+        <option
+          value="center-bottom"
+        >
+          Center Bottom
+        </option>
+        <option
+          value="below"
+        >
+          Below Image
+        </option>
+      </select>
+      <div
+        class="rt-TextFieldRoot rt-r-size-2 rt-variant-surface"
+        data-accent-color=""
+      >
+        <input
+          class="rt-reset rt-TextFieldInput"
+          data-testid="text"
+          placeholder="Search the docs…"
+          spellcheck="false"
+          value=""
+        />
+      </div>
+      <button
+        class="rt-reset rt-BaseButton rt-r-size-2 rt-variant-solid rt-Button"
+        data-accent-color=""
+        data-testid="submit"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;
