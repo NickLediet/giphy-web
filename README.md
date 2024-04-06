@@ -7,7 +7,28 @@
 3. Run `npm run dev`
 
 ## Todos:
-- [ ] Breakdown project plan
+- [ ] Data service layer
+- [ ] Components
+  - [ ] QuerySection
+    - [ ] EVENT: selected (emits: String query, String text, Postion:Enum position)
+  - [ ] Result Section
+    - [ ] States
+      - [ ] Loading
+      - [ ] Error
+      - [ ] Content/PreviewImageList
+    - [ ] Props
+      - [ ] String query
+      - [ ] String text
+      - [ ] Position:Enum position
+      - [ ] String[] imageUrls
+  - [ ] PreviewImageList
+    - [ ] 
+  - [ ] PreviewImage
+    - [ ] props
+      - [ ] String text
+      - [ ] Position:Enum position
+      - [ ] String imageUrl
+  - [ ] Pagination => Just use one from Radix (maybe just buttons)
 
 ## To be removed
 
