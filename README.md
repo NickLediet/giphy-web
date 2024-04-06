@@ -23,11 +23,14 @@
       - [ ] String[] imageUrls
   - [ ] PreviewImageList
     - [ ] 
-  - [ ] PreviewImage
-    - [ ] props
-      - [ ] String text
-      - [ ] Position:Enum position
-      - [ ] String imageUrl
+  - [x] PreviewImage
+    - [x] props
+      - [x] String text
+      - [x] Position:Enum position
+      - [x] String imageUrl
+    - [x] Functionality
+      - [x] Renders alt text
+
   - [ ] Pagination => Just use one from Radix (maybe just buttons)
 
 ## To be removed
