@@ -1,6 +1,7 @@
 import { QuerySection } from './components/QuerySection'
-import { Theme, Separator, Button, Heading, Flex, Box } from '@radix-ui/themes'
-import { useEffect, useState } from 'react'
+import { Theme, Separator, Button, Heading, Flex, Box, Grid } from '@radix-ui/themes'
+import { useState } from 'react'
+import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons'
 import { TextPosition, useImageQuery } from './lib'
 import { PreviewImageList } from './components/PreviewImageList'
 
@@ -46,10 +47,6 @@ function App() {
     queryImages(query, currentPage - 1)
   }
 
-  useEffect(() => {
-    console.log(images)
-  }, [images])
-
   return (
     <Theme appearance='dark'>
       <main>
@@ -63,9 +60,17 @@ function App() {
         { error && <div>{error}</div> }
         <Divider />
         { (text && position) && <div className="results-section">
-          <Button onClick={nextHandler}>Next</Button>
+          <Heading as="h2" size="4" mb={'3'} align={'center'}>Results</Heading>
+          <Grid columns={'2'} gap={'1'} maxWidth={'200px'} mx={'auto'} mb={'3'}>
+            <Button onClick={previousHandler} disabled={currentPage <= 0}>
+              <ArrowLeftIcon aria-label='Previous' />
+            </Button>
+
+            <Button onClick={nextHandler}>
+              <ArrowRightIcon aria-label='Next' />
+            </Button>
+          </Grid>
           <PreviewImageList images={images} text={text} position={position} />
-          <Button onClick={previousHandler}>Previous</Button>
         </div>}
       </main>
     </Theme>

@@ -1,4 +1,4 @@
-import { Box, Card, Flex, Text } from '@radix-ui/themes'
+import { Box, Card, Text } from '@radix-ui/themes'
 import { CSSProperties } from 'react'
 import { TextPosition } from "../lib"
 
@@ -15,7 +15,7 @@ function ImageText(props: { text: string, style?: CSSProperties }) {
     return (
         <Text 
             align={'center'} 
-            size={'4'}
+            size={'5'}
             style={{ 
                 width: '100%', 
                 display: 'block', 

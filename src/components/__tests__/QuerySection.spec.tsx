@@ -19,9 +19,7 @@ describe('QuerySection', () => {
     })
 
     it('calls onQueryChange when query changes', () => {
-        const onQueryChange = vi.fn((query: string, position: TextPosition, text: string) => {
-            console.log(query, position, text)
-        })
+        const onQueryChange = vi.fn()
         const {unmount, container} = render(<Theme>
             <QuerySection onQueryChange={onQueryChange} />
         </Theme>)

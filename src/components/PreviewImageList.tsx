@@ -1,4 +1,4 @@
-import { Grid, Heading } from '@radix-ui/themes'
+import { Grid} from '@radix-ui/themes'
 import { Image, TextPosition } from '../lib'
 import { PreviewImage } from './PreviewImage'
 
@@ -12,11 +12,10 @@ export function PreviewImageList(props: PreviewImageProps) {
     const { images, text, position } = props
     return (
         <>
-            <Heading as="h2" size="4" mb={'3'} align={'center'}>Results</Heading>
             <Grid 
                 className="preview-image-list-container" 
                 columns={{ initial: '1', sm: '3' }} 
-                gridRow={'1fr'}
+                gridRow={'auto'}
                 gap="3" 
                 width="auto">
                 {images && images.map(image => (
